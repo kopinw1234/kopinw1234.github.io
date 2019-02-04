@@ -6,16 +6,6 @@ p {
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
-pre {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-}
-/* .all-info {
-    
-}
-.info{
-    grid-column-start: 3;
-} */
 body {
     background-color: coral;
     text-align: center;
