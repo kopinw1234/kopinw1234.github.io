@@ -1,1 +1,36 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Specificity</title>
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+    
+    <img src="index.png" alt="index.html" height="300em" width="600em">
+    <p>ในส่วนของ head section จะเห็นว่ามีการเชื่อมโยง external css main1.css และ main2.css</p>
+    <img src="main1UseTag.png" alt="main1.css use tag" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main1.css</p>
+    <img src="main2UseTag.png" alt="main2.css use tag" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main2.css</p>
+    <img src="result1Tag2Tag.png" alt="result from main1.css use tag and main2.css use tag">
+    <pre>ผลลัพธ์จากการทำงานของ index.html จะเห็นได้ว่านำสีของ main2.css มาใช้งาน 
+        เพราะ selector เดียวกันจะเลือก apply declaration ที่อยู่ล่างสุด 
+    </pre>
+    <img src="main1UseClass.png" alt="main1.css use class" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main1.css เปลี่ยนให้มีการใช้ class selector</p>
+    <img src="result1Class2Tag.png" alt="result from main1.css use class and main2.css use tag">
+    <p>จะได้ผลลัพธ์ ตาม class ของ main1.css เพราะ จะเลือก class selector ก่อน tag</p>
+    <img src="main2UseClass.png" alt="main2.css use class" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main2.css เปลี่ยนให้มีการใช้ class selector</p>
+    <img src="result1Class2Class.png" alt="result from main1.css use class and main2.css use class">
+    <p>จะได้ผลลัพธ์ ตาม class ของ main1.css เพราะ selector เดียวกันจะเลือก apply declaration ที่อยู่ล่างสุด</p>
+    <img src="main1UseID.png" alt="main1.css use Id" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main1.css เปลี่ยนให้มีการใช้ ID selector</p>
+    <img src="result1ID2Class.png" alt="result from main1.css use Id and main2.css use Class">
+    <p>จะได้ผลลัพธ์ ตาม ID ของ main1.css เพราะ จะเลือก ID selector ก่อน class selector และ tag</p>
+    <img src="main2UseID.png" alt="main2.css use Id" height="300em" width="600em">
+    <p>โค้ดในส่วนของ main2.css เปลี่ยนให้มีการใช้ ID selector</p>
+    <img src="result1ID2ID.png" alt="result from main1.css use Id and main2.css use Id">
+    <p>จะได้ผลลัพธ์ ตาม ID ของ main2.css เพราะ selector เดียวกันจะเลือก apply declaration ที่อยู่ล่างสุด</p>
+</body>
+</html>
