@@ -2,13 +2,55 @@
 <html lang="en">
 <head>
     <title>JQuery</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet"  type="text/css" href="mystyle.css">
 </head>
 <body>
-    <div>
-        <input type="text" id="inputAll" placeholder="Enter What you want to search" >
-        <button id="search">Search</button>
+    <br>
+    <div id="simpleSearchAll">
+         Search 
+        <input type="text" id="inputAll">
+        <button id="searchButton">Search</button>
+        <button id="AdvSearchButton">Advance Search</button>
     </div>
-
+    <div id="advSearchAll">
+        <p>ID <input type="text" id="minID"> - <input type="text" id="maxID"></p>
+        <p>Name <input type="text" id="Name"></p>
+        <p>Gender <select name="type" id="genderSelector"><option value="all">All</option>
+        <option value="male">Male</option><option value="female">Female</option></select></p>
+        <p>Class <input type="text" id="minClass"> - <input type="text" id="maxClass"></p>
+        <p>Seat <input type="text" id="minSeat"> - <input type="text" id="maxSeat"></p>
+        <p>Club <input type="text" id="minClub"> - <input type="text" id="maxClub"></p>
+        <p>BreastSize <input type="text" id="minBS"> - <input type="text" id="maxBS"></p>
+        <p>HairStyle <input type="text" id="minHS"> - <input type="text" id="maxHS"></p>
+        <p>Color <select name="type" id="colorSelector"><option value="all">All</option>
+            <option value="black">Black</option><option value="red">Red</option>
+            <option value="yellow">Yellow</option><option value="green">Green</option>
+            <option value="blue">Blue</option><option value="cyan">Cyan</option><option value="purple">Purple</option>
+            <option value="white">White</option><option value="blonde">Blonde</option>
+            <option value="brown">Brown</option><option value="orange">Orange</option>
+            <option value="pippi">Pippi</option><option value="succubus">Succubus</option>
+            <option value="kuudere">Kuudere</option><option value="waifu">Waifu</option><option value="occult">Occult</option>
+            <option value="osana">Osana</option><option value="ganguro">Ganguro</option><option value="council">Council</option>
+            </select></p>
+        <p>Eye <select name="type" id="eyeSelector"><option value="all">All</option>
+                <option value="black">Black</option><option value="red">Red</option>
+                <option value="yellow">Yellow</option><option value="green">Green</option>
+                <option value="blue">Blue</option><option value="cyan">Cyan</option><option value="purple">Purple</option>
+                <option value="white">White</option><option value="blonde">Blonde</option>
+                <option value="brown">Brown</option><option value="orange">Orange</option>
+                <option value="pippi">Pippi</option><option value="succubus">Succubus</option>
+                <option value="kuudere">Kuudere</option><option value="waifu">Waifu</option><option value="occult">Occult</option>
+                <option value="osana">Osana</option><option value="ganguro">Ganguro</option><option value="council">Council</option>
+                </select></p>
+        <p>Eye Type <select name="type" id="eyeTypeSelector"><option value="all">All</option>
+            <option value="default">Default</option><option value="council">Council</option></select></p>   
+        <p>Info <input type="text" id="Info"></p>
+        <button id="searchAdvStyleButton">Search</button>
+        <button id="simpleSearchButton">Simple Search</button>
+    </div>
+    <br>
     <div>
             <table id="table" border='1'>
                     <tbody id="tableBody">
