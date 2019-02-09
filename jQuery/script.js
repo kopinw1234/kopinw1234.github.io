@@ -72,7 +72,49 @@ $(document).ready(function () {
         } else {
             setHeadTable();
             students.forEach(element => {
-                if (!(parseInt($("#minID").val()) <= parseInt(element.ID) && parseInt(element.ID) <= parseInt($("#maxID").val()))) {
+                if(parseInt($("#minID").val())>parseInt($("#maxID").val())){
+                    var minID = parseInt($("#maxID").val());
+                    var maxID = parseInt($("#minID").val());
+                }else{
+                    var minID = parseInt($("#minID").val());
+                    var maxID = parseInt($("#maxID").val());
+                }
+                if (parseInt($("#minClass").val())>parseInt($("#maxClass").val())) {
+                    var minClass = parseInt($("#maxClass").val());
+                    var maxClass = parseInt($("#minClass").val());
+                } else {
+                    var minClass = parseInt($("#minClass").val());
+                    var maxClass = parseInt($("#maxClass").val());
+                }
+                if (parseInt($("#minSeat").val())>parseInt($("#maxSeat").val())) {
+                    var minSeat = parseInt($("#maxSeat").val());
+                    var maxSeat = parseInt($("#minSeat").val());
+                } else {
+                    var minSeat = parseInt($("#minSeat").val());
+                    var maxSeat = parseInt($("#maxSeat").val());
+                }
+                if (parseInt($("#minClub").val())>parseInt($("#maxClub").val())) {
+                    var minClub = parseInt($("#maxClub").val());
+                    var maxClub = parseInt($("#minClub").val());
+                } else {
+                    var minClub = parseInt($("#minClub").val());
+                    var maxClub = parseInt($("#maxClub").val());
+                }
+                if (parseInt($("#minBS").val())>parseInt($("#maxBS").val())) {
+                    var minBS = parseInt($("#maxBS").val());
+                    var maxBS = parseInt($("#minBS").val());
+                } else {
+                    var minBS = parseInt($("#minBS").val());
+                    var maxBS = parseInt($("#maxBS").val());
+                }
+                if (parseInt($("#minHS").val())>parseInt($("#maxHS").val())) {
+                    var minHS = parseInt($("#maxHS").val());
+                    var maxHS = parseInt($("#minHS").val());
+                } else {
+                    var minHS = parseInt($("#minHS").val());
+                    var maxHS = parseInt($("#maxHS").val());
+                }
+                if (!(minID <= parseInt(element.ID) && parseInt(element.ID) <= maxID)) {
                     return;
                 }
                 if (!(element.Name.toLowerCase()).includes($("#Name").val().toLowerCase())) {
@@ -86,19 +128,19 @@ $(document).ready(function () {
                     }
 
                 }
-                if (!(parseInt($("#minClass").val()) <= parseInt(element.Class) && parseInt(element.Class) <= parseInt($("#maxClass").val()))) {
+                if (!(minClass <= parseInt(element.Class) && parseInt(element.Class) <= minClass)) {
                     return;
                 }
-                if (!(parseInt($("#minSeat").val()) <= parseInt(element.Seat) && parseInt(element.Seat) <= parseInt($("#maxSeat").val()))) {
+                if (!(minSeat<= parseInt(element.Seat) && parseInt(element.Seat) <= maxSeat)) {
                     return;
                 }
-                if (!(parseInt($("#minClub").val()) <= parseInt(element.Club) && parseInt(element.Club) <= parseInt($("#maxClub").val()))) {
+                if (!(minClub<= parseInt(element.Club) && parseInt(element.Club) <= maxClub)) {
                     return;
                 }
-                if (!(parseInt($("#minBS").val()) <= parseInt(element.BreastSize) && parseInt(element.BreastSize) <= parseInt($("#maxBS").val()))) {
+                if (!(minBS <= parseInt(element.BreastSize) && parseInt(element.BreastSize) <= maxBS)) {
                     return;
                 }
-                if (!(parseInt($("#minHS").val()) <= parseInt(element.HairStyle) && parseInt(element.HairStyle) <= parseInt($("#maxHS").val()))) {
+                if (!(minHS<= parseInt(element.HairStyle) && parseInt(element.HairStyle) <= maxHS)) {
                     return;
                 }
                 if (!element.Color.toLowerCase().includes($("select#colorSelector").find(":selected").val())) {
