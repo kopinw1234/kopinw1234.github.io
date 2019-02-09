@@ -128,7 +128,7 @@ $(document).ready(function () {
                     }
 
                 }
-                if (!(minClass <= parseInt(element.Class) && parseInt(element.Class) <= minClass)) {
+                if (!(minClass <= parseInt(element.Class) && parseInt(element.Class) <= maxClass)) {
                     return;
                 }
                 if (!(minSeat<= parseInt(element.Seat) && parseInt(element.Seat) <= maxSeat)) {
@@ -165,8 +165,6 @@ $(document).ready(function () {
                 }
                 tempStudents.push(element);
             });
-            console.log(tempStudents.length)
-            console.log(students.length)
             setTable(tempStudents);
         }
 
